@@ -1,0 +1,551 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Swann Family Tree</title><style>:root{--bg:#f5f7fb;--current:#2563eb;--ex:#f97316;--child:#16a34a;--selected:#facc15;--border:#e5e7eb;--note:#92400e;--note-bg:#fef3c7}*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);overflow:hidden;color:#1f2937}header{padding:1rem 1.5rem;background:linear-gradient(135deg,#1d4ed8,#3730a3);color:white}h1{margin:0;font-size:1.6rem}header p{margin:.2rem 0 0}.toolbar{height:58px;display:flex;gap:.6rem;align-items:center;padding:.7rem 1.5rem;background:#eff6ff;border-bottom:1px solid #bfdbfe}button{font:inherit;border-radius:.75rem;border:1px solid #bfdbfe;padding:.5rem .8rem;background:white;cursor:pointer;color:#1e40af;font-weight:700}#branchTitle{font-weight:800;color:#3730a3;margin-left:.5rem}.layout{height:calc(100vh - 132px);display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:1rem;padding:1rem}.details-panel{background:white;border:1px solid var(--border);border-radius:1rem;overflow:auto}.details-head{padding:1rem;background:#eef2ff;border-bottom:1px solid #dbeafe}.details-body{padding:1rem}.detail-row{display:grid;grid-template-columns:8rem 1fr;gap:.5rem;padding:.45rem 0;border-bottom:1px solid #f1f5f9}.detail-label{font-weight:700;color:#475569}.tree-wrapper{height:100%;overflow:hidden;position:relative;background:white;border:1px solid var(--border);border-radius:1.25rem;cursor:grab}.pan-layer{position:absolute;left:0;top:0;transform-origin:0 0}.tree-content{position:relative;width:6100px;height:2100px}.tree-view{position:absolute;left:0;top:0;display:none}.connector-svg{position:absolute;left:0;top:0;pointer-events:none}.person-card{position:absolute;width:178px;min-height:86px;background:white;border:1px solid #e5e7eb;border-radius:.85rem;padding:.75rem;box-shadow:0 1px 2px #0001;cursor:pointer;z-index:2}.person-card:hover{outline:3px solid #bfdbfe}.person-card.selected{outline:4px solid var(--selected);background:#fefce8}.person-name{font-weight:800}.lifespan,.meta{color:#64748b;font-size:.9rem;margin-top:.25rem}.note{margin-top:.5rem;background:var(--note-bg);color:var(--note);padding:.45rem;border-radius:.6rem;font-size:.84rem}.parents-btn{margin-top:.55rem;padding:.3rem .5rem;font-size:.78rem;background:#f5f3ff;border-color:#c4b5fd;color:#6d28d9}</style></head><body><header><h1>Swann Family Tree</h1><p>Compiled by Richard Swann</p></header><div class="toolbar"><button id="zoomOut">Zoom out</button><button id="zoomIn">Zoom in</button><button id="resetView">Reset view</button><button id="backMain" style="display:none">Back to main tree</button><span id="branchTitle"></span><span id="zoomReadout" style="margin-left:auto"></span></div><div class="layout"><main id="treeWrapper" class="tree-wrapper"><div id="panLayer" class="pan-layer"><div id="treeContent" class="tree-content"><section id="view-main" class="tree-view" data-title="Main Swann branch" data-width="6100" data-height="2100"><svg class="connector-svg" viewBox="0 0 6100 2100" style="width:6100px;height:2100px"><path d="M 3149.0 133.0 H 3349.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3249.0 133.0 V 316.0 H 1939.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3249.0 133.0 V 316.0 H 2189.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3249.0 133.0 V 316.0 H 2439.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3249.0 133.0 V 316.0 H 2889.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3249.0 133.0 V 316.0 H 3139.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3249.0 133.0 V 316.0 H 3389.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2439.0 393.0 H 2639.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 789.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 1049.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 1489.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 1929.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 2379.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 2629.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 3069.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 3509.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 3949.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 4389.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2539.0 393.0 V 626.0 H 4889.0 V 650.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1049.0 703.0 H 1249.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1489.0 703.0 H 1689.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1589.0 703.0 V 906.0 H 1489.0 V 930.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1489.0 983.0 H 1689.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1589.0 983.0 V 1186.0 H 1589.0 V 1210.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2129.0 703.0 H 1929.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 2829.0 703.0 H 2629.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3069.0 703.0 H 3269.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3509.0 703.0 H 3709.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3949.0 703.0 H 4149.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4389.0 703.0 H 4589.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4489.0 703.0 V 956.0 H 4269.0 V 980.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4489.0 703.0 V 956.0 H 4829.0 V 980.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4269.0 1033.0 H 4469.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4369.0 1033.0 V 1236.0 H 4369.0 V 1260.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4369.0 1313.0 H 4569.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4469.0 1313.0 V 1526.0 H 4089.0 V 1550.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4469.0 1313.0 V 1526.0 H 4649.0 V 1550.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4469.0 1313.0 V 1526.0 H 5409.0 V 1550.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4089.0 1603.0 H 3889.0" fill="none" stroke="var(--ex)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7"/><path d="M 3989.0 1603.0 V 1816.0 H 3889.0 V 1840.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 3989.0 1603.0 V 1816.0 H 4089.0 V 1840.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4089.0 1603.0 H 4289.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 5409.0 1603.0 H 5209.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 5309.0 1603.0 V 1816.0 H 5209.0 V 1840.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 5409.0 1603.0 H 5609.0" fill="none" stroke="var(--ex)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7"/><path d="M 5509.0 1603.0 V 1816.0 H 5409.0 V 1840.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 5509.0 1603.0 V 1816.0 H 5609.0 V 1840.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4649.0 1603.0 H 4849.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4749.0 1603.0 V 1816.0 H 4649.0 V 1840.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 4749.0 1603.0 V 1816.0 H 4849.0 V 1840.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="person-card" tabindex="0" style="left:3060px;top:80px" data-person-id="1" data-details="Thomas Swann aka Swan
+ID: 1
+Born: 1816
+Died: 1872
+Maiden name: 
+Location: Cossington
+Relationships: Partner: Hannah Ben Bow Swann; children: Mary Swann, Eliza Swann, Frederick Swann, Amos Swann, George Swann, Ruth Swann
+Notes: " draggable="false"><div class="person-name">Thomas Swann aka Swan</div><div class="lifespan">1816 – 1872</div><div class="meta">Location: Cossington</div></div><div class="person-card" tabindex="0" style="left:3260px;top:80px" data-person-id="2" data-details="Hannah Ben Bow Swann
+ID: 2
+Born: 1818
+Died: 
+Maiden name: Blakeman
+Location: Nothampton
+Relationships: Partner: Thomas Swann aka Swan; children: Mary Swann, Eliza Swann, Frederick Swann, Amos Swann, George Swann, Ruth Swann
+Notes: " draggable="false"><div class="person-name">Hannah Ben Bow Swann</div><div class="lifespan">1818 –</div><div class="meta">Maiden name: Blakeman</div><div class="meta">Location: Nothampton</div></div><div class="person-card" tabindex="0" style="left:1850px;top:340px" data-person-id="3" data-details="Mary Swann
+ID: 3
+Born: 1858
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Thomas Swann aka Swan and Hannah Ben Bow Swann
+Notes: " draggable="false"><div class="person-name">Mary Swann</div><div class="lifespan">1858 –</div></div><div class="person-card" tabindex="0" style="left:2100px;top:340px" data-person-id="4" data-details="Eliza Swann
+ID: 4
+Born: 1842
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Thomas Swann aka Swan and Hannah Ben Bow Swann
+Notes: " draggable="false"><div class="person-name">Eliza Swann</div><div class="lifespan">1842 –</div></div><div class="person-card" tabindex="0" style="left:2350px;top:340px" data-person-id="5" data-details="Frederick Swann
+ID: 5
+Born: 1848
+Died: 1923
+Maiden name: 
+Location: 
+Relationships: Child of: Thomas Swann aka Swan and Hannah Ben Bow Swann
+Partner: Mary Ann Swann; children: George Swann, John Swann, Ellen Hubbard, Fredrick Swann, Herbert Swann, Emma Freer, Annie Hubbard, Stella Hubbard, Harry Swann, Edward Swann, Norman Swann
+Notes: " draggable="false"><div class="person-name">Frederick Swann</div><div class="lifespan">1848 – 1923</div></div><div class="person-card" tabindex="0" style="left:2550px;top:340px" data-person-id="9" data-details="Mary Ann Swann
+ID: 9
+Born: 1854
+Died: 
+Maiden name: Burton
+Location: 
+Relationships: Partner: Frederick Swann; children: George Swann, John Swann, Ellen Hubbard, Fredrick Swann, Herbert Swann, Emma Freer, Annie Hubbard, Stella Hubbard, Harry Swann, Edward Swann, Norman Swann
+Notes: " draggable="false"><div class="person-name">Mary Ann Swann</div><div class="lifespan">1854 –</div><div class="meta">Maiden name: Burton</div></div><div class="person-card" tabindex="0" style="left:2800px;top:340px" data-person-id="6" data-details="Amos Swann
+ID: 6
+Born: 1852
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Thomas Swann aka Swan and Hannah Ben Bow Swann
+Notes: " draggable="false"><div class="person-name">Amos Swann</div><div class="lifespan">1852 –</div></div><div class="person-card" tabindex="0" style="left:3050px;top:340px" data-person-id="7" data-details="George Swann
+ID: 7
+Born: 1853
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Thomas Swann aka Swan and Hannah Ben Bow Swann
+Notes: " draggable="false"><div class="person-name">George Swann</div><div class="lifespan">1853 –</div></div><div class="person-card" tabindex="0" style="left:3300px;top:340px" data-person-id="8" data-details="Ruth Swann
+ID: 8
+Born: 1856
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Thomas Swann aka Swan and Hannah Ben Bow Swann
+Notes: " draggable="false"><div class="person-name">Ruth Swann</div><div class="lifespan">1856 –</div></div><div class="person-card" tabindex="0" style="left:700px;top:650px" data-person-id="10" data-details="George Swann
+ID: 10
+Born: 1881
+Died: 1963
+Maiden name: 
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Notes: " draggable="false"><div class="person-name">George Swann</div><div class="lifespan">1881 – 1963</div></div><div class="person-card" tabindex="0" style="left:960px;top:650px" data-person-id="11" data-details="John Swann
+ID: 11
+Born: 1884
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Partner: Harriet Starmer-Swann
+Notes: " draggable="false"><div class="person-name">John Swann</div><div class="lifespan">1884 –</div></div><div class="person-card" tabindex="0" style="left:1160px;top:650px" data-person-id="21" data-details="Harriet Starmer-Swann
+ID: 21
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: John Swann
+Notes: " draggable="false"><div class="person-name">Harriet Starmer-Swann</div></div><div class="person-card" tabindex="0" style="left:1400px;top:650px" data-person-id="12" data-details="Ellen Hubbard
+ID: 12
+Born: 1878
+Died: 
+Maiden name: Swann
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Partner: Samuel Hubbard; children: Bert Hubbard
+Notes: " draggable="false"><div class="person-name">Ellen Hubbard</div><div class="lifespan">1878 –</div><div class="meta">Maiden name: Swann</div></div><div class="person-card" tabindex="0" style="left:1600px;top:650px" data-person-id="22" data-details="Samuel Hubbard
+ID: 22
+Born: 1918
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Ellen Hubbard; children: Bert Hubbard
+Notes: " draggable="false"><div class="person-name">Samuel Hubbard</div><div class="lifespan">1918 –</div></div><div class="person-card" tabindex="0" style="left:1840px;top:650px" data-person-id="13" data-details="Fredrick Swann
+ID: 13
+Born: 1877
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Partner: Mary-Ann Hubbard
+Notes: " draggable="false"><div class="person-name">Fredrick Swann</div><div class="lifespan">1877 –</div></div><div class="person-card" tabindex="0" style="left:2040px;top:650px" data-person-id="26" data-details="Mary-Ann Hubbard
+ID: 26
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Fredrick Swann
+Notes: " draggable="false"><div class="person-name">Mary-Ann Hubbard</div></div><div class="person-card" tabindex="0" style="left:2290px;top:650px" data-person-id="14" data-details="Herbert Swann
+ID: 14
+Born: 1895
+Died: 1918
+Maiden name: 
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Notes: WW1 Army, thrown from horse carrying ammuniton to guns - Atla Beiselle, France" draggable="false"><div class="person-name">Herbert Swann</div><div class="lifespan">1895 – 1918</div><div class="note">WW1 Army, thrown from horse carrying ammuniton to guns - Atla Beiselle, France</div></div><div class="person-card" tabindex="0" style="left:2540px;top:650px" data-person-id="15" data-details="Emma Freer
+ID: 15
+Born: 1872
+Died: 
+Maiden name: Swann
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Partner: Edward Freer
+Notes: " draggable="false"><div class="person-name">Emma Freer</div><div class="lifespan">1872 –</div><div class="meta">Maiden name: Swann</div></div><div class="person-card" tabindex="0" style="left:2740px;top:650px" data-person-id="27" data-details="Edward Freer
+ID: 27
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Emma Freer
+Notes: " draggable="false"><div class="person-name">Edward Freer</div></div><div class="person-card" tabindex="0" style="left:2980px;top:650px" data-person-id="16" data-details="Annie Hubbard
+ID: 16
+Born: 1873
+Died: 1927
+Maiden name: Swann
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Partner: William Hubbard
+Notes: 5 children" draggable="false"><div class="person-name">Annie Hubbard</div><div class="lifespan">1873 – 1927</div><div class="meta">Maiden name: Swann</div><div class="note">5 children</div></div><div class="person-card" tabindex="0" style="left:3180px;top:650px" data-person-id="28" data-details="William Hubbard
+ID: 28
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Annie Hubbard
+Notes: " draggable="false"><div class="person-name">William Hubbard</div></div><div class="person-card" tabindex="0" style="left:3420px;top:650px" data-person-id="17" data-details="Stella Hubbard
+ID: 17
+Born: 1889
+Died: 
+Maiden name: Swann
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Partner: Thomas Hubbard
+Notes: " draggable="false"><div class="person-name">Stella Hubbard</div><div class="lifespan">1889 –</div><div class="meta">Maiden name: Swann</div></div><div class="person-card" tabindex="0" style="left:3620px;top:650px" data-person-id="29" data-details="Thomas Hubbard
+ID: 29
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Stella Hubbard
+Notes: " draggable="false"><div class="person-name">Thomas Hubbard</div></div><div class="person-card" tabindex="0" style="left:3860px;top:650px" data-person-id="18" data-details="Harry Swann
+ID: 18
+Born: 1892
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Partner: Winifred Swann
+Notes: " draggable="false"><div class="person-name">Harry Swann</div><div class="lifespan">1892 –</div></div><div class="person-card" tabindex="0" style="left:4060px;top:650px" data-person-id="30" data-details="Winifred Swann
+ID: 30
+Born: 
+Died: 
+Maiden name: Holland
+Location: 
+Relationships: Partner: Harry Swann
+Notes: " draggable="false"><div class="person-name">Winifred Swann</div><div class="meta">Maiden name: Holland</div></div><div class="person-card" tabindex="0" style="left:4300px;top:650px" data-person-id="19" data-details="Edward Swann
+ID: 19
+Born: 1894
+Died: 1970
+Maiden name: 
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Partner: Florence Jane Hall; children: Albert Swann, Alan Swann
+Notes: " draggable="false"><div class="person-name">Edward Swann</div><div class="lifespan">1894 – 1970</div></div><div class="person-card" tabindex="0" style="left:4500px;top:650px" data-person-id="31" data-details="Florence Jane Hall
+ID: 31
+Born: 
+Died: 
+Maiden name: Holland
+Location: 
+Relationships: Child of: Jane Hall and John Ronaly McDonald Hall
+Partner: Edward Swann; children: Albert Swann, Alan Swann
+Notes: " draggable="false"><div class="person-name">Florence Jane Hall</div><div class="meta">Maiden name: Holland</div><button type="button" class="parents-btn" data-view="florence-parents">Show parents</button></div><div class="person-card" tabindex="0" style="left:4800px;top:650px" data-person-id="20" data-details="Norman Swann
+ID: 20
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Frederick Swann and Mary Ann Swann
+Notes: " draggable="false"><div class="person-name">Norman Swann</div></div><div class="person-card" tabindex="0" style="left:1400px;top:930px" data-person-id="23" data-details="Bert Hubbard
+ID: 23
+Born: 1914
+Died: 1972
+Maiden name: 
+Location: 
+Relationships: Child of: Ellen Hubbard and Samuel Hubbard
+Partner: Florence Hubbard; children: Carol Hubbard
+Notes: " draggable="false"><div class="person-name">Bert Hubbard</div><div class="lifespan">1914 – 1972</div></div><div class="person-card" tabindex="0" style="left:1600px;top:930px" data-person-id="24" data-details="Florence Hubbard
+ID: 24
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Bert Hubbard; children: Carol Hubbard
+Notes: " draggable="false"><div class="person-name">Florence Hubbard</div></div><div class="person-card" tabindex="0" style="left:1500px;top:1210px" data-person-id="25" data-details="Carol Hubbard
+ID: 25
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Bert Hubbard and Florence Hubbard
+Notes: " draggable="false"><div class="person-name">Carol Hubbard</div></div><div class="person-card" tabindex="0" style="left:4180px;top:980px" data-person-id="37" data-details="Albert Swann
+ID: 37
+Born: 1919
+Died: 1972
+Maiden name: 
+Location: 
+Relationships: Child of: Edward Swann and Florence Jane Hall
+Partner: Kathleen Swann; children: Richard Swann
+Notes: " draggable="false"><div class="person-name">Albert Swann</div><div class="lifespan">1919 – 1972</div></div><div class="person-card" tabindex="0" style="left:4380px;top:980px" data-person-id="38" data-details="Kathleen Swann
+ID: 38
+Born: 1920
+Died: 
+Maiden name: Burley
+Location: 
+Relationships: Child of: Robert Harry Burley and Unknown
+Partner: Albert Swann; children: Richard Swann
+Notes: " draggable="false"><div class="person-name">Kathleen Swann</div><div class="lifespan">1920 –</div><div class="meta">Maiden name: Burley</div><button type="button" class="parents-btn" data-view="kathleen-parents">Show parents</button></div><div class="person-card" tabindex="0" style="left:4740px;top:980px" data-person-id="39" data-details="Alan Swann
+ID: 39
+Born: 1924
+Died: 
+Maiden name: Burley
+Location: 
+Relationships: Child of: Edward Swann and Florence Jane Hall
+Notes: " draggable="false"><div class="person-name">Alan Swann</div><div class="lifespan">1924 –</div><div class="meta">Maiden name: Burley</div></div><div class="person-card" tabindex="0" style="left:4280px;top:1260px" data-person-id="46" data-details="Richard Swann
+ID: 46
+Born: 1950
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Child of: Albert Swann and Kathleen Swann
+Partner: Marilyn Swann; children: Laura Kate Swann, Rebecca Swann, Natalie Swann
+Notes: Living Legend" draggable="false"><div class="person-name">Richard Swann</div><div class="lifespan">1950 –</div><div class="meta">Location: Loughborough</div><div class="note">Living Legend</div></div><div class="person-card" tabindex="0" style="left:4480px;top:1260px" data-person-id="47" data-details="Marilyn Swann
+ID: 47
+Born: 1950
+Died: 
+Maiden name: Oswin
+Location: Loughborough
+Relationships: Child of: Joan and Ronald Oswin
+Partner: Richard Swann; children: Laura Kate Swann, Rebecca Swann, Natalie Swann
+Notes: Living Legend" draggable="false"><div class="person-name">Marilyn Swann</div><div class="lifespan">1950 –</div><div class="meta">Maiden name: Oswin</div><div class="meta">Location: Loughborough</div><div class="note">Living Legend</div><button type="button" class="parents-btn" data-view="marilyn-parents">Show parents</button></div><div class="person-card" tabindex="0" style="left:3800px;top:1550px" data-person-id="62" data-details="Adam Wragg
+ID: 62
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Ex-partner: Laura Kate Swann; children: Ted Valentino Wragg, Huey Fox Wragg
+Notes: " draggable="false"><div class="person-name">Adam Wragg</div></div><div class="person-card" tabindex="0" style="left:4000px;top:1550px" data-person-id="59" data-details="Laura Kate Swann
+ID: 59
+Born: 1980
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Child of: Richard Swann and Marilyn Swann
+Ex-partner: Adam Wragg; children: Ted Valentino Wragg, Huey Fox Wragg
+Partner: Connor Luke Ferguson
+Notes: " draggable="false"><div class="person-name">Laura Kate Swann</div><div class="lifespan">1980 –</div><div class="meta">Location: Loughborough</div></div><div class="person-card" tabindex="0" style="left:4200px;top:1550px" data-person-id="65" data-details="Connor Luke Ferguson
+ID: 65
+Born: 1990
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Partner: Laura Kate Swann
+Notes: " draggable="false"><div class="person-name">Connor Luke Ferguson</div><div class="lifespan">1990 –</div><div class="meta">Location: Loughborough</div></div><div class="person-card" tabindex="0" style="left:4560px;top:1550px" data-person-id="60" data-details="Rebecca Swann
+ID: 60
+Born: 
+Died: 
+Maiden name: 
+Location: Belton
+Relationships: Child of: Richard Swann and Marilyn Swann
+Partner: Nigel Garner; children: Jack Garner, Freya Garner
+Notes: " draggable="false"><div class="person-name">Rebecca Swann</div><div class="meta">Location: Belton</div></div><div class="person-card" tabindex="0" style="left:4760px;top:1550px" data-person-id="71" data-details="Nigel Garner
+ID: 71
+Born: 
+Died: 
+Maiden name: 
+Location: Belton
+Relationships: Partner: Rebecca Swann; children: Jack Garner, Freya Garner
+Notes: " draggable="false"><div class="person-name">Nigel Garner</div><div class="meta">Location: Belton</div></div><div class="person-card" tabindex="0" style="left:5120px;top:1550px" data-person-id="66" data-details="Patrick Perkins
+ID: 66
+Born: 
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Partner: Natalie Swann; children: Sidney Perkins
+Notes: " draggable="false"><div class="person-name">Patrick Perkins</div><div class="meta">Location: Loughborough</div></div><div class="person-card" tabindex="0" style="left:5320px;top:1550px" data-person-id="61" data-details="Natalie Swann
+ID: 61
+Born: 
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Child of: Richard Swann and Marilyn Swann
+Partner: Patrick Perkins; children: Sidney Perkins
+Ex-partner: Scott Tyler; children: Lydia Swann-Tyler, Finn Tyler
+Notes: " draggable="false"><div class="person-name">Natalie Swann</div><div class="meta">Location: Loughborough</div></div><div class="person-card" tabindex="0" style="left:5520px;top:1550px" data-person-id="68" data-details="Scott Tyler
+ID: 68
+Born: 
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Ex-partner: Natalie Swann; children: Lydia Swann-Tyler, Finn Tyler
+Notes: " draggable="false"><div class="person-name">Scott Tyler</div><div class="meta">Location: Loughborough</div></div><div class="person-card" tabindex="0" style="left:3800px;top:1840px" data-person-id="63" data-details="Ted Valentino Wragg
+ID: 63
+Born: 2011
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Child of: Laura Kate Swann and Adam Wragg
+Notes: " draggable="false"><div class="person-name">Ted Valentino Wragg</div><div class="lifespan">2011 –</div><div class="meta">Location: Loughborough</div></div><div class="person-card" tabindex="0" style="left:4000px;top:1840px" data-person-id="64" data-details="Huey Fox Wragg
+ID: 64
+Born: 2015
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Child of: Laura Kate Swann and Adam Wragg
+Notes: " draggable="false"><div class="person-name">Huey Fox Wragg</div><div class="lifespan">2015 –</div><div class="meta">Location: Loughborough</div></div><div class="person-card" tabindex="0" style="left:4560px;top:1840px" data-person-id="72" data-details="Jack Garner
+ID: 72
+Born: 
+Died: 
+Maiden name: 
+Location: Belton
+Relationships: Child of: Rebecca Swann and Nigel Garner
+Notes: " draggable="false"><div class="person-name">Jack Garner</div><div class="meta">Location: Belton</div></div><div class="person-card" tabindex="0" style="left:4760px;top:1840px" data-person-id="73" data-details="Freya Garner
+ID: 73
+Born: 
+Died: 
+Maiden name: 
+Location: Rugby
+Relationships: Child of: Rebecca Swann and Nigel Garner
+Notes: " draggable="false"><div class="person-name">Freya Garner</div><div class="meta">Location: Rugby</div></div><div class="person-card" tabindex="0" style="left:5120px;top:1840px" data-person-id="67" data-details="Sidney Perkins
+ID: 67
+Born: 2011
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Child of: Natalie Swann and Patrick Perkins
+Notes: " draggable="false"><div class="person-name">Sidney Perkins</div><div class="lifespan">2011 –</div><div class="meta">Location: Loughborough</div></div><div class="person-card" tabindex="0" style="left:5320px;top:1840px" data-person-id="69" data-details="Lydia Swann-Tyler
+ID: 69
+Born: 2000
+Died: 
+Maiden name: 
+Location: London
+Relationships: Child of: Natalie Swann and Scott Tyler
+Notes: " draggable="false"><div class="person-name">Lydia Swann-Tyler</div><div class="lifespan">2000 –</div><div class="meta">Location: London</div></div><div class="person-card" tabindex="0" style="left:5520px;top:1840px" data-person-id="70" data-details="Finn Tyler
+ID: 70
+Born: 
+Died: 
+Maiden name: 
+Location: Loughborough
+Relationships: Child of: Natalie Swann and Scott Tyler
+Notes: " draggable="false"><div class="person-name">Finn Tyler</div><div class="meta">Location: Loughborough</div></div></div></section><section id="view-florence-parents" class="tree-view" data-title="Parents of Florence Jane Hall" data-width="1300" data-height="900"><svg class="connector-svg" viewBox="0 0 1300 900" style="width:1300px;height:900px"><path d="M 609.0 133.0 H 809.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 709.0 133.0 V 306.0 H 709.0 V 330.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 509.0 383.0 H 709.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 609.0 383.0 V 576.0 H 609.0 V 600.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="person-card" tabindex="0" style="left:520px;top:80px" data-person-id="36" data-details="Thomas Hall
+ID: 36
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Jane Hall; children: John Ronaly McDonald Hall
+Notes: " draggable="false"><div class="person-name">Thomas Hall</div></div><div class="person-card" tabindex="0" style="left:720px;top:80px" data-person-id="35" data-details="Jane Hall
+ID: 35
+Born: 
+Died: 
+Maiden name: Whyatt
+Location: 
+Relationships: Partner: Thomas Hall; children: John Ronaly McDonald Hall
+Notes: " draggable="false"><div class="person-name">Jane Hall</div><div class="meta">Maiden name: Whyatt</div></div><div class="person-card" tabindex="0" style="left:420px;top:330px" data-person-id="33" data-details="Jane Hall
+ID: 33
+Born: 
+Died: 
+Maiden name: Whyatt
+Location: 
+Relationships: Partner: John Ronaly McDonald Hall; children: Florence Jane Hall
+Notes: " draggable="false"><div class="person-name">Jane Hall</div><div class="meta">Maiden name: Whyatt</div></div><div class="person-card" tabindex="0" style="left:620px;top:330px" data-person-id="34" data-details="John Ronaly McDonald Hall
+ID: 34
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Thomas Hall and Jane Hall
+Partner: Jane Hall; children: Florence Jane Hall
+Notes: " draggable="false"><div class="person-name">John Ronaly McDonald Hall</div></div><div class="person-card" tabindex="0" style="left:520px;top:600px" data-person-id="31" data-details="Florence Jane Hall
+ID: 31
+Born: 
+Died: 
+Maiden name: Holland
+Location: 
+Relationships: Child of: Jane Hall and John Ronaly McDonald Hall
+Partner: Edward Swann; children: Albert Swann, Alan Swann
+Notes: " draggable="false"><div class="person-name">Florence Jane Hall</div><div class="meta">Maiden name: Holland</div></div></div></section><section id="view-kathleen-parents" class="tree-view" data-title="Parents and siblings of Kathleen Swann" data-width="1700" data-height="620"><svg class="connector-svg" viewBox="0 0 1700 620" style="width:1700px;height:620px"><path d="M 509.0 133.0 H 709.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 609.0 133.0 V 316.0 H 609.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 609.0 133.0 V 316.0 H 849.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 609.0 133.0 V 316.0 H 1049.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 609.0 133.0 V 316.0 H 1249.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 609.0 133.0 V 316.0 H 1449.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="person-card" tabindex="0" style="left:420px;top:80px" data-person-id="40" data-details="Robert Harry Burley
+ID: 40
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Unknown; children: Kathleen Swann, Olive, Reg, Stan, Dick
+Notes: " draggable="false"><div class="person-name">Robert Harry Burley</div></div><div class="person-card" tabindex="0" style="left:620px;top:80px" data-person-id="41" data-details="Unknown
+ID: 41
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Robert Harry Burley; children: Kathleen Swann, Olive, Reg, Stan, Dick
+Notes: " draggable="false"><div class="person-name">Unknown</div></div><div class="person-card" tabindex="0" style="left:520px;top:340px" data-person-id="38" data-details="Kathleen Swann
+ID: 38
+Born: 1920
+Died: 
+Maiden name: Burley
+Location: 
+Relationships: Child of: Robert Harry Burley and Unknown
+Partner: Albert Swann; children: Richard Swann
+Notes: " draggable="false"><div class="person-name">Kathleen Swann</div><div class="lifespan">1920 –</div><div class="meta">Maiden name: Burley</div></div><div class="person-card" tabindex="0" style="left:760px;top:340px" data-person-id="42" data-details="Olive
+ID: 42
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Robert Harry Burley and Unknown
+Notes: " draggable="false"><div class="person-name">Olive</div></div><div class="person-card" tabindex="0" style="left:960px;top:340px" data-person-id="43" data-details="Reg
+ID: 43
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Robert Harry Burley and Unknown
+Notes: " draggable="false"><div class="person-name">Reg</div></div><div class="person-card" tabindex="0" style="left:1160px;top:340px" data-person-id="44" data-details="Stan
+ID: 44
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Robert Harry Burley and Unknown
+Notes: " draggable="false"><div class="person-name">Stan</div></div><div class="person-card" tabindex="0" style="left:1360px;top:340px" data-person-id="45" data-details="Dick
+ID: 45
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Robert Harry Burley and Unknown
+Notes: " draggable="false"><div class="person-name">Dick</div></div></div></section><section id="view-marilyn-parents" class="tree-view" data-title="Parents and grandparents of Marilyn Swann" data-width="1750" data-height="900"><svg class="connector-svg" viewBox="0 0 1750 900" style="width:1750px;height:900px"><path d="M 829.0 133.0 H 1029.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 929.0 133.0 V 316.0 H 309.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 929.0 133.0 V 316.0 H 509.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 929.0 133.0 V 316.0 H 709.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 929.0 133.0 V 316.0 H 909.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 929.0 133.0 V 316.0 H 1109.0 V 340.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1109.0 393.0 H 1309.0" fill="none" stroke="var(--current)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1209.0 393.0 V 596.0 H 829.0 V 620.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1209.0 393.0 V 596.0 H 1029.0 V 620.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1209.0 393.0 V 596.0 H 1229.0 V 620.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M 1209.0 393.0 V 596.0 H 1429.0 V 620.0" fill="none" stroke="var(--child)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="person-card" tabindex="0" style="left:740px;top:80px" data-person-id="48" data-details="Lilian Astal
+ID: 48
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Unknown; children: Edward, Lesley, Gordon, Beatrice, Joan
+Notes: " draggable="false"><div class="person-name">Lilian Astal</div></div><div class="person-card" tabindex="0" style="left:940px;top:80px" data-person-id="54" data-details="Unknown
+ID: 54
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Lilian Astal; children: Edward, Lesley, Gordon, Beatrice, Joan
+Notes: " draggable="false"><div class="person-name">Unknown</div></div><div class="person-card" tabindex="0" style="left:220px;top:340px" data-person-id="49" data-details="Edward
+ID: 49
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Lilian Astal and Unknown
+Notes: " draggable="false"><div class="person-name">Edward</div></div><div class="person-card" tabindex="0" style="left:420px;top:340px" data-person-id="50" data-details="Lesley
+ID: 50
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Lilian Astal and Unknown
+Notes: " draggable="false"><div class="person-name">Lesley</div></div><div class="person-card" tabindex="0" style="left:620px;top:340px" data-person-id="51" data-details="Gordon
+ID: 51
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Lilian Astal and Unknown
+Notes: " draggable="false"><div class="person-name">Gordon</div></div><div class="person-card" tabindex="0" style="left:820px;top:340px" data-person-id="52" data-details="Beatrice
+ID: 52
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Lilian Astal and Unknown
+Notes: " draggable="false"><div class="person-name">Beatrice</div></div><div class="person-card" tabindex="0" style="left:1020px;top:340px" data-person-id="53" data-details="Joan
+ID: 53
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Lilian Astal and Unknown
+Partner: Ronald Oswin; children: Linda Oswin, Gail Oswin, Lesley Oswin, Marilyn Swann
+Notes: " draggable="false"><div class="person-name">Joan</div></div><div class="person-card" tabindex="0" style="left:1220px;top:340px" data-person-id="55" data-details="Ronald Oswin
+ID: 55
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Partner: Joan; children: Linda Oswin, Gail Oswin, Lesley Oswin, Marilyn Swann
+Notes: " draggable="false"><div class="person-name">Ronald Oswin</div></div><div class="person-card" tabindex="0" style="left:740px;top:620px" data-person-id="56" data-details="Linda Oswin
+ID: 56
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Joan and Ronald Oswin
+Notes: " draggable="false"><div class="person-name">Linda Oswin</div></div><div class="person-card" tabindex="0" style="left:940px;top:620px" data-person-id="57" data-details="Gail Oswin
+ID: 57
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Joan and Ronald Oswin
+Notes: " draggable="false"><div class="person-name">Gail Oswin</div></div><div class="person-card" tabindex="0" style="left:1140px;top:620px" data-person-id="58" data-details="Lesley Oswin
+ID: 58
+Born: 
+Died: 
+Maiden name: 
+Location: 
+Relationships: Child of: Joan and Ronald Oswin
+Notes: " draggable="false"><div class="person-name">Lesley Oswin</div></div><div class="person-card" tabindex="0" style="left:1340px;top:620px" data-person-id="47" data-details="Marilyn Swann
+ID: 47
+Born: 1950
+Died: 
+Maiden name: Oswin
+Location: Loughborough
+Relationships: Child of: Joan and Ronald Oswin
+Partner: Richard Swann; children: Laura Kate Swann, Rebecca Swann, Natalie Swann
+Notes: Living Legend" draggable="false"><div class="person-name">Marilyn Swann</div><div class="lifespan">1950 –</div><div class="meta">Maiden name: Oswin</div><div class="meta">Location: Loughborough</div><div class="note">Living Legend</div></div></div></section></div></div></main><aside class="details-panel"><div class="details-head"><h2>Person details</h2></div><div id="detailsBody" class="details-body"><div class="placeholder">Click a person to show details here.</div></div></aside></div><script>(function(){var zoom=.78,panX=20,panY=20,drag=false,sx=0,sy=0,spx=0,spy=0,current='main';function id(x){return document.getElementById(x)}function tx(){var p=id('panLayer');p.style.transform='translate('+panX+'px, '+panY+'px) scale('+zoom+')';p.style.webkitTransform=p.style.transform;id('zoomReadout').innerHTML=Math.round(zoom*100)+'%'}function center(){var w=id('treeWrapper'); if(current==='main'){panX=w.clientWidth/2-3150*zoom;panY=20}else{panX=20;panY=50}tx()}function z(v){var o=zoom;zoom=Math.max(.25,Math.min(1.8,v));panX*=zoom/o;panY*=zoom/o;tx()}function reset(){zoom=.78;center()}function clear(){var c=document.getElementsByClassName('person-card');for(var i=0;i<c.length;i++)c[i].className=String(c[i].className).replace(/\s*selected/g,'')}function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}function select(c){clear();c.className+=' selected';var lines=(c.getAttribute('data-details')||'').split('\n'),html='<h3 style="margin:0 0 .75rem">'+esc(lines[0])+'</h3>';for(var i=1;i<lines.length;i++){var k=lines[i].indexOf(':');if(k>0){var lab=lines[i].slice(0,k),val=lines[i].slice(k+1).replace(/^\s+/,'');if(val)html+='<div class="detail-row"><div class="detail-label">'+esc(lab)+'</div><div class="detail-value" style="white-space:pre-line">'+esc(val)+'</div></div>'}}id('detailsBody').innerHTML=html}function show(v){var vs=document.getElementsByClassName('tree-view');for(var i=0;i<vs.length;i++)vs[i].style.display='none';var view=id('view-'+v);view.style.display='block';current=v;id('treeContent').style.width=view.getAttribute('data-width')+'px';id('treeContent').style.height=view.getAttribute('data-height')+'px';id('branchTitle').innerHTML=view.getAttribute('data-title');id('backMain').style.display=v==='main'?'none':'inline-block';id('detailsBody').innerHTML='<div class="placeholder">Click a person to show details here.</div>';clear();reset()}function anc(el,cls){while(el&&el!==document){if(el.className&&String(el.className).indexOf(cls)!==-1)return el;el=el.parentNode}return null}function isbtn(el){while(el&&el!==document){if(el.tagName==='BUTTON')return true;el=el.parentNode}return false}function attach(){var cards=document.getElementsByClassName('person-card');for(var i=0;i<cards.length;i++)cards[i].onclick=function(e){if(e&&e.stopPropagation)e.stopPropagation();select(this);return false};var pb=document.getElementsByClassName('parents-btn');for(i=0;i<pb.length;i++)pb[i].onclick=function(e){if(e&&e.stopPropagation)e.stopPropagation();show(this.getAttribute('data-view'));return false};id('backMain').onclick=function(){show('main');return false};id('zoomOut').onclick=function(){z(zoom-.1);return false};id('zoomIn').onclick=function(){z(zoom+.1);return false};id('resetView').onclick=function(){reset();return false};var w=id('treeWrapper');w.onmousedown=function(e){e=e||window.event;if(e.button!==0)return true;if(anc(e.target||e.srcElement,'person-card')||isbtn(e.target||e.srcElement))return true;if(e.preventDefault)e.preventDefault();drag=true;sx=e.clientX;sy=e.clientY;spx=panX;spy=panY;return false};document.onmousemove=function(e){if(!drag)return;e=e||window.event;panX=spx+e.clientX-sx;panY=spy+e.clientY-sy;tx()};document.onmouseup=function(){drag=false};if(w.addEventListener)w.addEventListener('wheel',function(e){if(e.preventDefault)e.preventDefault();z(zoom+(e.deltaY<0?.08:-.08))},{passive:false});show('main')}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',attach);else attach()})();</script></body></html>
